@@ -59,7 +59,7 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
     console.log("lets play rock paper scissors f*ckers!")
     for (let i = 0; i < 5; i++) {
-        const playerSelection = getComputerChoice();
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }
