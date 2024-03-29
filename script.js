@@ -57,11 +57,30 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame() {
+    let scorePlayer = 0;
+    let scoreComputer = 0;
     console.log("lets play rock paper scissors f*ckers!")
     for (let i = 0; i < 5; i++) {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        console.log("Ready for another round? Lets go!!")
+        if (checkWinner(playerSelection, computerSelection) == "Player") {
+            scorePlayer++;
+        }
+        else if (checkWinner(playerSelection, computerSelection) == "Computer") {
+            scoreComputer++;
+        }
+    }
+    console.log("game is over idiots")
+    if (scorePlayer > scoreComputer) {
+        console.log("You won mf, woohoooh!!!")
+    }
+    else if (scorePlayer < scoreComputer) {
+        console.log("You dumbf*ck. Computer was the winner!")
+    }
+    else {
+        console.log("Its a tie you mediocre numbskull")
     }
 }
 
